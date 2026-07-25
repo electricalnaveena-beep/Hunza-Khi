@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* Default Theme: Neubrutalist Pop (Hunza Pop) */
+  --bg-canvas: #F2F2F7;
+  --card-bg: #FFFFFF;
+  --card-border: #1A1A1A;
+  --card-shadow: 4px 4px 0px #1A1A1A;
+  --card-shadow-sm: 2px 2px 0px #1A1A1A;
+  --text-primary: #1A1A1A;
+  --text-muted: #525252;
+  --accent-gold: #FFD700;
+  --accent-gold-text: #1A1A1A;
+  --accent-indigo: #6366F1;
+  --accent-dark: #1A1A1A;
+  --accent-dark-text: #FFFFFF;
+  --input-bg: #F8F9FA;
+}
+
+[data-theme="emerald"] {
+  /* Emerald Valley (Fresh Organic) */
+  --bg-canvas: #F4F7F4;
+  --card-bg: #FFFFFF;
+  --card-border: #1E3A2B;
+  --card-shadow: 4px 4px 0px #1E3A2B;
+  --card-shadow-sm: 2px 2px 0px #1E3A2B;
+  --text-primary: #0F291E;
+  --text-muted: #406051;
+  --accent-gold: #388E3C;
+  --accent-gold-text: #FFFFFF;
+  --accent-indigo: #2E7D32;
+  --accent-dark: #1E3A2B;
+  --accent-dark-text: #FFFFFF;
+  --input-bg: #EAF0EC;
+}
+
+[data-theme="midnight"] {
+  /* Midnight Alpine (Luxury Dark) */
+  --bg-canvas: #0B1120;
+  --card-bg: #151F32;
+  --card-border: #334155;
+  --card-shadow: 4px 4px 0px #030712;
+  --card-shadow-sm: 2px 2px 0px #030712;
+  --text-primary: #F8FAFC;
+  --text-muted: #94A3B8;
+  --accent-gold: #F59E0B;
+  --accent-gold-text: #0F172A;
+  --accent-indigo: #38BDF8;
+  --accent-dark: #1E293B;
+  --accent-dark-text: #F8FAFC;
+  --input-bg: #1E293B;
+}
+
+[data-theme="terracotta"] {
+  /* Sun-Dried Terracotta (Warm Sunset) */
+  --bg-canvas: #F7F3EF;
+  --card-bg: #FFFFFF;
+  --card-border: #451A03;
+  --card-shadow: 4px 4px 0px #451A03;
+  --card-shadow-sm: 2px 2px 0px #451A03;
+  --text-primary: #290F03;
+  --text-muted: #6B4E3D;
+  --accent-gold: #EA580C;
+  --accent-gold-text: #FFFFFF;
+  --accent-indigo: #D97706;
+  --accent-dark: #451A03;
+  --accent-dark-text: #FFFFFF;
+  --input-bg: #EFE8E1;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.bento-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px var(--card-border);
+}
+
+.bento-card-flat {
+  background-color: var(--card-bg);
+  border: 2px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.stat-value {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}

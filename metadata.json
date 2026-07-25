@@ -1,0 +1,6 @@
+{
+  "name": "Hunza Harvest",
+  "description": "Organic Hunza dried fruits, banana chips, and high-grade dehydrated vegetables processed in Korangi, Karachi. Express cash on delivery across Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
